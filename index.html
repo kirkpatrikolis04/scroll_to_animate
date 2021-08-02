@@ -32,16 +32,11 @@
             sect.forEach(item => {
                 let el = item.getBoundingClientRect().top;
                 let h1 = item.firstElementChild;
-               
-               if(el - windowH <= -100) {
-                    h1.style.transform = 'translateX(0%)';
-               } else {
-                    h1.style.transform = 'translateX(-50%)';
-               }
+                return (el - windowH <= -100 ? h1.style.transform = 'translateX(0%)' : h1.style.transform = 'translateX(-50%)');
             });
         });
        
     </script>
-    
+
 </body>
 </html>
