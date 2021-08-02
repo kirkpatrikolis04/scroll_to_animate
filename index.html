@@ -12,30 +12,25 @@
     <section class=" sect_1">
         <h1>animate1</h1>
     </section>
-
     <section class="sect sect_2">
         <h1>animate2</h1>
     </section>
-
     <section class="sect sect_3">
         <h1>animate3</h1>
     </section>
     
 
     <script>
-
         const sect = document.querySelectorAll('.sect');
     
         window.addEventListener('scroll', e => {
             let windowH = window.innerHeight;
-
             sect.forEach(item => {
                 let el = item.getBoundingClientRect().top;
                 let h1 = item.firstElementChild;
                 return (el - windowH <= -100 ? h1.style.transform = 'translateX(0%)' : h1.style.transform = 'translateX(-50%)');
             });
         });
-       
     </script>
 
 </body>
